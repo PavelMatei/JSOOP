@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function produsNou(nume,pret,stoc,dataFabricatii){
+            const obj={};
+            obj.nume=nume;
+            obj.pret=pret;
+            obj.stoc=stoc;
+            obj.dataFabricatii=dataFabricatii;
+            obj.afiseaza=function(){
+                console.log(`Produsul ${this.nume} costa ${this.pret}`)
+            }
+            obj.cumpara=function(){
+                if(this.stoc>0){
+                    this.stoc-=1;//this.stoc=this.stoc-1;
+                    //this.stoc--
+                    //--this.stoc
+                    console.log(`Produsul ${this.nume} a fost adaugat in cos`)
+                }
+            }
+            return obj;
+        }
+        const paine=produsNou('Paine',8,36,'2020-02-22');
+        paine.afiseaza();
+        paine.cumpara();
+        console.log(paine.nume);
+        console.log(paine)
+    </script>
+</body>
+</html>
