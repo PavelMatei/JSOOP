@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1=10;
+        let num2=20;
+        [num1,num2]=[num2,num1];
+        console.log(num1,num2);
+        //Metoda 1!!!
+        function palindrom(str){
+            let reversedString="";
+            for(let i=0;i<str.lenght;i++){
+                reversedString=str.chartAt(i)+reversedString;
+            }if(str===reversedString){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //Metoda 2!!!
+        function palindrom2(str){
+            let reversedString=str.split("").reverse().join("");
+            if(str===reversedString){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
